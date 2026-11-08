@@ -320,6 +320,7 @@ function SaintsPage() {
       {saints.map((saint, i) => {
         return <article className={'saint-card saint-' + i} key={saint.name}>
           <div className="saint-visual">
+            <img className="saint-photo-backdrop" src={import.meta.env.BASE_URL + saint.photo} alt="" aria-hidden="true" loading="lazy" decoding="async"/>
             <img className="saint-photo" src={import.meta.env.BASE_URL + saint.photo} alt={saint.name} loading="lazy" decoding="async"/>
             <div className="saint-visual-footer">✦ CAMINHO DE SANTIDADE ✦</div>
           </div>
