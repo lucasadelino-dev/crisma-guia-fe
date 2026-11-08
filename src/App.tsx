@@ -1,7 +1,7 @@
 import { useEffect, useState, type ReactNode } from 'react';
 import {
-  ArrowLeft, ArrowRight, ArrowUpRight, BookHeart, BookOpen, CalendarDays, Check,
-  CheckCircle2, ChevronDown, ChevronLeft, ChevronRight, Church, CircleHelp,
+  ArrowRight, ArrowUpRight, BookHeart, BookOpen, CalendarDays, Check,
+  CheckCircle2, ChevronDown, ChevronLeft, ChevronRight, CircleHelp,
   Clock3, Compass, Cross, Crown, ExternalLink, Feather, Flame, Flower2,
   HandHeart, Heart, Home, Leaf, Menu, Monitor, RotateCcw, Scale,
   ShieldCheck, Sparkles, Sun, X, type LucideIcon
@@ -143,7 +143,8 @@ function RosaryPage() {
   };
   return <div className="page-content">
     <PageHeading eyebrow="ORAÇÃO E CONTEMPLAÇÃO" title="Santo Rosário" description="Pelas mãos de Maria, contemplamos os mistérios da vida de Jesus. Reze no seu ritmo, com calma e presença.">
-      <Ref label="CIC 971 e 2678 · Devoção mariana" href={SOURCE.maria}/>
+      <Ref label="CIC 971 · Devoção mariana" href={SOURCE.maria}/>
+      <Ref label="CIC 2678 · O Rosário" href={SOURCE.prayer}/>
       <Ref label="Rosarium Virginis Mariae" href={SOURCE.rosary}/>
     </PageHeading>
 
@@ -289,7 +290,8 @@ function ExamPage() {
   return <div className="page-content">
     <PageHeading eyebrow="SILÊNCIO · REFLEXÃO" title="Exame de consciência" description="Um momento de sinceridade diante de Deus, à luz dos Dez Mandamentos e do Evangelho. Sem pressa, sem pontuação.">
       <Ref href={SOURCE.confession} label="CIC 1454 · Exame de consciência"/>
-      <Ref href={SOURCE.decalogue} label="CIC 2052–2557 · Decálogo"/>
+      <Ref href={SOURCE.firstCommandments} label="CIC 2083–2195 · Amar a Deus"/>
+      <Ref href={SOURCE.decalogue} label="CIC 2196–2557 · Amar o próximo"/>
     </PageHeading>
     <div className="guide-card"><div className="guide-icon"><Heart size={22}/></div><div><strong>Uma ajuda, não um julgamento.</strong><p>Estas perguntas são sugestões de reflexão, não uma lista exaustiva nem um diagnóstico. Reflita sobre atos concretos, com confiança na misericórdia de Deus. Em caso de dúvidas pessoais, converse com seu confessor.</p></div></div>
     <div className="exam-bar"><div><strong>Os Dez Mandamentos</strong><p>Marque somente o que desejar levar à reflexão.</p></div><button type="button" onClick={() => setChecked(new Set())} disabled={checked.size === 0} className="text-action"><RotateCcw size={15}/> Limpar marcações</button></div>
