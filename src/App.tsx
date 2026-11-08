@@ -320,8 +320,8 @@ function SaintsPage() {
       {saints.map((saint, i) => {
         return <article className={'saint-card saint-' + i} key={saint.name}>
           <div className="saint-visual">
-            <img className="saint-photo-backdrop" src={import.meta.env.BASE_URL + saint.photo} alt="" aria-hidden="true" loading="lazy" decoding="async"/>
-            <img className="saint-photo" src={import.meta.env.BASE_URL + saint.photo} alt={saint.name} loading="lazy" decoding="async"/>
+            <img className="saint-photo-backdrop" src={import.meta.env.BASE_URL + saint.photo + '?v=2'} alt="" aria-hidden="true" loading="lazy" decoding="async"/>
+            <img className="saint-photo" src={import.meta.env.BASE_URL + saint.photo + '?v=2'} alt={saint.name} loading="lazy" decoding="async"/>
             <div className="saint-visual-footer">✦ CAMINHO DE SANTIDADE ✦</div>
           </div>
           <div className="saint-details"><span className="eyebrow small-eyebrow">{saint.subtitle.toUpperCase()}</span><h2>{saint.name}</h2><p className="saint-feast"><CalendarDays size={15}/> Celebração: {saint.year}</p><p className="saint-story">{saint.story}</p><div className="saint-example"><Leaf size={17}/><span><strong>Para inspirar a vida:</strong> {saint.example}</span></div>
