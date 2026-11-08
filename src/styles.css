@@ -244,13 +244,13 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
 .closing-prayer p { font-family:var(--serif); font-size:23px; font-style:italic; line-height:1.65; color:#425b49; }
 .saints-stack { display:flex; flex-direction:column; gap:21px; }
 .saint-card { display:grid; grid-template-columns: 34% 1fr; border:1px solid #e6e8e2; background:#fffefa; border-radius:13px; overflow:hidden; min-height:400px; }
-.saint-visual { background:linear-gradient(140deg,#c7d3bb,#e9e5cc); position:relative; display:flex; align-items:center; justify-content:center; min-height:360px; overflow:hidden; }
-.saint-1 .saint-visual { background:linear-gradient(145deg,#d6dfd6,#e6ece3); }
-.saint-2 .saint-visual { background:linear-gradient(145deg,#ead8c6,#f0e6d9); }
-.saint-halo { position:absolute; width:210px; height:210px; border-radius:50%; border:1px solid rgba(255,255,255,.75); box-shadow: 0 0 0 25px rgba(255,255,255,.18), 0 0 0 65px rgba(255,255,255,.1); }
-.saint-monogram { font-family:var(--serif); font-size: 140px; color:rgba(51,81,60,.43); font-weight:normal; font-style:italic; position:relative; z-index:1; }
-.saint-symbol { position:absolute; bottom:65px; left:calc(50% + 40px); color:rgba(53,85,63,.6); z-index:2; }
-.saint-visual-footer { position:absolute; bottom:20px; font-size:9px; letter-spacing:2px; font-weight:800; color:rgba(58,80,56,.65); }
+.saint-visual { background:#e7e9e2; position:relative; display:flex; align-items:center; justify-content:center; min-height:360px; overflow:hidden; isolation:isolate; }
+.saint-photo { position:absolute; inset:0; width:100%; height:100%; object-fit:cover; object-position:center; }
+.saint-0 .saint-photo { object-position:center top; }
+.saint-1 .saint-photo { object-position:53% center; }
+.saint-2 .saint-photo { object-position:center 26%; }
+.saint-visual::after { content:""; position:absolute; inset:55% 0 0; z-index:1; background:linear-gradient(to bottom,transparent,rgba(23,38,28,.56)); pointer-events:none; }
+.saint-visual-footer { position:absolute; bottom:20px; z-index:2; font-size:9px; letter-spacing:2px; font-weight:800; color:#fff; text-shadow:0 1px 10px rgba(0,0,0,.5); }
 .saint-details { padding:35px 39px 29px; }
 .saint-details h2 { font-family:var(--serif); font-size:34px; font-weight:normal; margin:0 0 12px; letter-spacing:-.5px; }
 .saint-feast { color:#9d8c72; font-size:11px; display:flex; align-items:center; gap:7px; margin:0 0 19px; }
@@ -303,8 +303,6 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
  .saint-card { grid-template-columns: 30% 1fr; }
  .saint-details { padding:27px 24px; }
  .saint-visual { min-height:350px; }
- .saint-monogram { font-size:96px; }
- .saint-halo { width:130px; height:130px; }
  .bottom-nav { display:grid; position:fixed; bottom:0; left:0; right:0; z-index:45; grid-template-columns: repeat(6,1fr); height:calc(65px + env(safe-area-inset-bottom)); padding:5px 8px env(safe-area-inset-bottom); background:rgba(255,254,250,.98); border-top:1px solid #e4e9e1; box-shadow:0 -5px 22px rgba(35,58,40,.045); }
  .bottom-nav button { background:none; border:0; display:flex; flex-direction:column; align-items:center; justify-content:center; gap:4px; color:#88968a; padding:4px 1px; font-size:9px; min-width:0; }
  .bottom-nav button.active { color:#45694d; font-weight:800; }
@@ -376,10 +374,7 @@ button:focus-visible, a:focus-visible, summary:focus-visible, input:focus-visibl
  .exam-questions { padding:6px 15px; }
  .closing-prayer p { font-size:20px; }
  .saint-card { display:flex; flex-direction:column; }
- .saint-visual { height:190px; min-height:190px; }
- .saint-halo { width:135px; height:135px; }
- .saint-monogram { font-size:105px; }
- .saint-symbol { bottom:30px; }
+ .saint-visual { height:260px; min-height:260px; }
  .saint-visual-footer { bottom:10px; }
  .saint-details { padding:25px 22px; }
  .saint-details h2 { font-size:29px; }

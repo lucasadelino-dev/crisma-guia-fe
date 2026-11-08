@@ -118,7 +118,7 @@ export const commandments = [
 
 export const saints = [
   {
-    name: 'Nossa Senhora Aparecida', subtitle: 'Rainha e Padroeira do Brasil', year: '12 de outubro', initials: 'M',
+    name: 'Nossa Senhora Aparecida', subtitle: 'Rainha e Padroeira do Brasil', year: '12 de outubro', initials: 'M', photo: 'santos/nossa-senhora-aparecida.webp',
     symbol: 'crown', quote: 'Sob o manto de Maria, aprendemos a seguir Jesus.',
     story: 'Em 1717, pescadores encontraram nas águas do rio Paraíba do Sul uma pequena imagem de Nossa Senhora da Conceição. A devoção cresceu entre as famílias e tornou-se um dos grandes sinais de fé do povo brasileiro. Em 1930, o papa Pio XI proclamou Nossa Senhora Aparecida Rainha e Padroeira do Brasil.',
     example: 'Confiança, simplicidade, intercessão e acolhimento.',
@@ -127,7 +127,7 @@ export const saints = [
     catechism: 'CIC 971', catechismUrl: SOURCE.maria,
   },
   {
-    name: 'São Carlo Acutis', subtitle: 'Santidade na vida cotidiana', year: '12 de outubro', initials: 'C',
+    name: 'São Carlo Acutis', subtitle: 'Santidade na vida cotidiana', year: '12 de outubro', initials: 'C', photo: 'santos/carlo-acutis.webp',
     symbol: 'monitor', quote: 'A vida comum também pode tornar-se caminho de santidade.',
     story: 'Carlo nasceu em 1991 e cresceu em Milão. Tinha grande amor pela Eucaristia, pela Virgem Maria e pelo Rosário. Usou seus conhecimentos de informática para divulgar a fé e se dedicou à caridade. Morreu em 2006, aos 15 anos, e foi canonizado em 7 de setembro de 2025 pelo papa Leão XIV.',
     example: 'Amizade com Jesus, serviço aos pobres e bom uso da tecnologia.',
@@ -136,7 +136,7 @@ export const saints = [
     catechism: 'CIC 1324', catechismUrl: SOURCE.eucharist,
   },
   {
-    name: 'Beata Sandra Sabattini', subtitle: 'Caridade que transforma', year: '4 de maio', initials: 'S',
+    name: 'Beata Sandra Sabattini', subtitle: 'Caridade que transforma', year: '4 de maio', initials: 'S', photo: 'santos/sandra-sabattini.webp',
     symbol: 'hand-heart', quote: 'O amor se concretiza no cuidado com quem sofre.',
     story: 'Sandra nasceu em 1961, na Itália. Desde jovem participou de trabalhos de acolhimento e serviço a pessoas com deficiência e em situação de dependência química, ligada à Comunidade Papa João XXIII. Morreu em 1984, aos 22 anos, e foi beatificada em Rimini em 24 de outubro de 2021.',
     example: 'Amor aos pequenos, generosidade e entrega ao próximo.',

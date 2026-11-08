@@ -318,9 +318,11 @@ function SaintsPage() {
     </PageHeading>
     <div className="saints-stack">
       {saints.map((saint, i) => {
-        const Icon = i === 0 ? Crown : i === 1 ? Monitor : HandHeart;
         return <article className={'saint-card saint-' + i} key={saint.name}>
-          <div className="saint-visual"><span className="saint-halo"/><span className="saint-monogram">{saint.initials}</span><Icon className="saint-symbol" size={32} strokeWidth={1.45}/><div className="saint-visual-footer">✦ CAMINHO DE SANTIDADE ✦</div></div>
+          <div className="saint-visual">
+            <img className="saint-photo" src={import.meta.env.BASE_URL + saint.photo} alt={saint.name} loading="lazy" decoding="async"/>
+            <div className="saint-visual-footer">✦ CAMINHO DE SANTIDADE ✦</div>
+          </div>
           <div className="saint-details"><span className="eyebrow small-eyebrow">{saint.subtitle.toUpperCase()}</span><h2>{saint.name}</h2><p className="saint-feast"><CalendarDays size={15}/> Celebração: {saint.year}</p><p className="saint-story">{saint.story}</p><div className="saint-example"><Leaf size={17}/><span><strong>Para inspirar a vida:</strong> {saint.example}</span></div>
             <details className="saint-prayer"><summary><Heart size={16}/> Uma oração <ChevronDown size={17}/></summary><p>{saint.prayer}</p><small>Oração original para devoção pessoal.</small></details>
             <div className="saint-sources"><Ref href={saint.source} label={saint.sourceName}/><Ref href={saint.catechismUrl} label={saint.catechism}/></div>
